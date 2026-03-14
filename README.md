@@ -1,5 +1,10 @@
 # API Rate Limiter
 
+
+Rate Limit: 10 requests per minute per IP
+API Key Limit: 50 requests per minute
+
+
 A rate limiting system implemented as FastAPI middleware using Redis.
 
 This system protects APIs from abuse by limiting how many requests a client can make within a specific time window.
@@ -8,11 +13,11 @@ This system protects APIs from abuse by limiting how many requests a client can 
 
 ## Features
 
-• IP based rate limiting  
-• API key based rate limiting  
-• Redis backed request counters  
-• FastAPI middleware implementation  
-• configurable request limits  
+- IP based rate limiting
+- API key based rate limiting
+- Redis backed request counters
+- FastAPI middleware implementation
+- Configurable request limits
 
 ---
 
@@ -39,8 +44,8 @@ Flow
 
 ## Project Structure
 
-app/
-- main.py
+app/  
+└── main.py  
 
 requirements.txt  
 README.md  
@@ -69,22 +74,18 @@ curl http://127.0.0.1:8002
 
 Response
 
-{
-"message": "Request allowed"
-}
+{ "message": "Request allowed" }
 
 If rate limit exceeded
 
-{
-"detail": "IP rate limit exceeded"
-}
+{ "detail": "IP rate limit exceeded" }
 
 ---
 
 ## Future Improvements
 
-• sliding window rate limiting  
-• distributed rate limiting  
-• user specific rate limits  
-• API analytics
+- sliding window rate limiting
+- distributed rate limiting
+- user specific rate limits
+- API analytics
 
